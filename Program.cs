@@ -1,25 +1,15 @@
-﻿// Задача 32 
+﻿
+int a = new Random().Next(1000);
 
-int[] array = new int[10];
-for (int i = 0; i < array.Length; i++)
-    array[i] = new Random().Next(-9, 10);
-Print(array);
+Console.Write($"digits in {a}={DigitsCount(a)}");
 
-Invers(array);
-
-Print(array);
-
-void Invers(int[] arr)
+int DigitsCount(int _a)
 {
-    for (int i = 0; i < arr.Length; i++)
-
-        arr[i] = -arr[i];
-}
-
-
-void Print(int[] arr)
-{
-    for (int i = 0; i < arr.Length; i++)
-        Console.Write($"{arr[i]} ");
-    Console.WriteLine();
+    int k = 0;
+    while (_a > 0)
+    {
+        _a /= 10;
+        k++;
+    }
+    return k;
 }
