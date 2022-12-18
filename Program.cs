@@ -11,3 +11,10 @@ Print(array);
 for (int i = 0; i < array.Length; i++)
     array[i] = -array[i];
 Print(array);
+
+void Print(int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+        Console.Write($"{arr[i]} ");
+    Console.WriteLine();
+}
